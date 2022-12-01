@@ -13,7 +13,7 @@ import { AppService } from './app.service';
       {
         name: 'ANALYTICS',
         transport: Transport.TCP,
-        options: { port: 3001 },
+        options: { port: 7002 },
       },
     ]),
   ],

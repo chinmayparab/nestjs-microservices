@@ -20,4 +20,19 @@ export class AppController {
   getAnalytics() {
     return this.appService.getAnalytics();
   }
+
+  @Get('anti')
+  getAnti() {
+    return this.appService.anti();
+  }
+
+  @Get('fromAnToCo')
+  anToCo() {
+    return this.appService.anToCo();
+  }
+
+  @Get('fromCoToAn')
+  coToAn() {
+    return this.appService.coToAn();
+  }
 }

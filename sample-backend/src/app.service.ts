@@ -31,4 +31,16 @@ export class AppService {
   getAnalytics() {
     return this.analyticsClient.send({ cmd: 'get_analytics' }, {});
   }
+
+  anToCo() {
+    return this.analyticsClient.send({ cmd: 'anToCo' }, {});
+  }
+
+  coToAn() {
+    return this.communicationClient.emit('coToAn', { sike: 'sike.com' });
+  }
+
+  anti() {
+    return this.analyticsClient.emit('anti', {});
+  }
 }
