@@ -42,8 +42,8 @@ export class AppController {
   }
 
   @EventPattern('anti')
-  setAnti() {
-    console.log('midsec');
-    this.communicationClient.emit('anti', {});
+  setAnti(id: any) {
+    console.log('midsec', id);
+    this.communicationClient.emit('anti', { id });
   }
 }

@@ -26,8 +26,8 @@ export class AppController {
   }
 
   @EventPattern('anti')
-  antipattern() {
-    console.log('antiseptic');
+  antipattern(id) {
+    console.log('antiseptic', id);
   }
 
   @MessagePattern({ cmd: 'anToCo' })

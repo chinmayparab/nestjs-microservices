@@ -23,7 +23,7 @@ export class AppController {
 
   @Get('anti')
   getAnti() {
-    return this.appService.anti();
+    return this.appService.anti('help');
   }
 
   @Get('fromAnToCo')

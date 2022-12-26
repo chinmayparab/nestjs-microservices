@@ -40,7 +40,7 @@ export class AppService {
     return this.communicationClient.emit('coToAn', { sike: 'sike.com' });
   }
 
-  anti() {
-    return this.analyticsClient.emit('anti', {});
+  anti(id: any) {
+    return this.analyticsClient.emit('anti', { id });
   }
 }
