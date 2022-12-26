@@ -1,0 +1,43 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run nest",
+      "dependsOn": ["Run Analytics", "Run Backend", "Run Comms"],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Run Analytics",
+      "type": "npm",
+      "script": "start:dev",
+      "path": "sample-analytics",
+      "detail": "nest start",
+      "presentation": {
+        "group": "groupServerStuff"
+      }
+    },
+    {
+      "label": "Run Backend",
+      "type": "npm",
+      "script": "start:dev",
+      "path": "sample-backend",
+      "detail": "nest start",
+      "presentation": {
+        "group": "groupServerStuff"
+      }
+    },
+    {
+      "label": "Run Comms",
+      "type": "npm",
+      "script": "start:dev",
+      "path": "sample-communication",
+      "detail": "nest start",
+      "presentation": {
+        "group": "groupServerStuff"
+      }
+    }
+  ]
+}

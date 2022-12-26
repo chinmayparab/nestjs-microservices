@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { ChatGateway } from './chat.gateway';
 
 @Module({
   imports: [
@@ -13,11 +14,11 @@ import { AppService } from './app.service';
       {
         name: 'ANALYTICS',
         transport: Transport.TCP,
-        options: { port: 3001 },
+        options: { port: 7002 },
       },
     ]),
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, ChatGateway],
 })
 export class AppModule {}

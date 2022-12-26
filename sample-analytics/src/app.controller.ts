@@ -30,4 +30,20 @@ export class AppController {
   getAnalytics() {
     return this.appService.getAnalytics();
   }
+
+  @EventPattern('anToCo')
+  anToCo() {
+    return this.communicationClient.send({ cmd: 'anToCo' }, {});
+  }
+
+  @MessagePattern({ cmd: 'coToAn' })
+  coToAn(sike) {
+    console.log({ cmd: 'coToAn' }, sike);
+  }
+
+  @EventPattern('anti')
+  setAnti(id: any) {
+    console.log('midsec', id);
+    this.communicationClient.emit('anti', { id });
+  }
 }
